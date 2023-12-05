@@ -8,7 +8,7 @@ import TotalRecovered from "@/components/TotalRecovered";
 import Hostpitalize from "@/components/Hospitalize";
 import TotalDeath from "@/components/TotalDeath";
 
-export const revalidate = 0;
+export const revalidate = 1800;
 
 export default async function Home() {
   const dataPerWeek = await getDataPerWeek();
