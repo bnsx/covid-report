@@ -11,7 +11,7 @@ export default function MobileVersion({ onOpenChange, data }: Props) {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black text-white z-50 flex justify-center items-center">
       <div className="relative w-full">
-        <div className="absolute top-5 right-5">
+        <div className="absolute top-20 right-5">
           <Button
             variant={"link"}
             onClick={onOpenChange}
