@@ -3,7 +3,6 @@ import { DataTable } from "./data-table";
 import { columns } from "./columns";
 import TotalCase from "@/components/TotalCase";
 import { getDataOverview } from "@/lib/covid/overview";
-import { Input } from "@/components/ui/input";
 import TotalRecovered from "@/components/TotalRecovered";
 import Hostpitalize from "@/components/Hospitalize";
 import TotalDeath from "@/components/TotalDeath";
