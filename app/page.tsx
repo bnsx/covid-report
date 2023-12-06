@@ -28,6 +28,9 @@ export default async function Home() {
               <Hostpitalize data={dataOverview} />
             </div>
             <TotalDeath data={dataOverview} />
+            <p className="text-muted-foreground text-center">
+              ข้อมูลล่าสุด ณ วันที่ {dataOverview.UpdateDate}
+            </p>
           </div>
         </div>
         <div className="xl:w-3/4 space-y-5">
