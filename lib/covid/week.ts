@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from "axios"
 
 export async function getDataPerWeek() {
     const { data }: AxiosResponse<DataPerWeek[]> = await axios.get("https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces")
-    return data.filter((x) => !(x.province.includes("ประเทศ") || x.province.includes("ไม่ระบุ")))
+    return data.filter((x) => !(x.province.includes("ประเทศ") || x.province.includes("ไม่ระบุ"))).sort((a, b) => a.province.localeCompare(b.province));
 }
 export interface DataPerWeek {
     year: number
