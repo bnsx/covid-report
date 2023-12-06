@@ -26,13 +26,13 @@ export default function MobileVersion({ onOpenChange, data }: Props) {
               if (v.icon) {
                 return (
                   <Button key={v.url} className="w-full" variant={"outline"}>
-                    <Link href={v.url} className="w-full">{v.icon}</Link>
+                    <Link href={v.url} className="w-full flex justify-center">{v.icon}</Link>
                   </Button>
                 );
               }
               return (
                 <Button key={v.url} className="w-full" variant={"outline"}>
-                  <Link href={v.url}>{v.label}</Link>
+                  <Link href={v.url} className="w-full">{v.label}</Link>
                 </Button>
               );
             })}
