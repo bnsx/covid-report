@@ -1,10 +1,15 @@
 "use client";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const data = [
   { label: "หน้าแรก", url: "/" },
   { label: "อาการ", url: "/symptom" },
-  { label: "ติดต่อ", url: "/contact" },
+  {
+    label: "github",
+    url: "https://github.com/bnsx",
+    icon: <GitHubLogoIcon className="w-6 h-6" />,
+  },
 ];
 export default function Navbar() {
   return (
@@ -15,14 +20,15 @@ export default function Navbar() {
       >
         Hypersonix
       </Link>
-      <div className="xl:block hidden">
+      <div className="xl:flex items-center gap-6 hidden">
         {data.map((v) => (
           <Link
             key={v.url}
             href={v.url}
-            className="text-lg hover:text-muted-foreground text-white duration-300 pl-5"
+            target="_blank"
+            className="text-lg hover:text-muted-foreground text-white duration-300"
           >
-            {v.label}
+            {v.icon ? v.icon : v.label}
           </Link>
         ))}
       </div>
