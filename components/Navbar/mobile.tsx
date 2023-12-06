@@ -26,7 +26,7 @@ export default function MobileVersion({ onOpenChange, data }: Props) {
               if (v.icon) {
                 return (
                   <Button key={v.url} className="w-full" variant={"outline"}>
-                    <Link href={v.url}>{v.icon}</Link>
+                    <Link href={v.url} className="w-full">{v.icon}</Link>
                   </Button>
                 );
               }
