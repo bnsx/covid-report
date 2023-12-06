@@ -47,6 +47,7 @@ export default function Navbar() {
       </div>
       <Button
         id="button-for-expand-and-collapsible"
+        aria-label="Expand or Collapse" // Adding an aria-label for accessibility
         type="button"
         variant={"link"}
         className="xl:hidden"
