@@ -25,18 +25,14 @@ export default function MobileVersion({ onOpenChange, data }: Props) {
             {data.map((v) => {
               if (v.icon) {
                 return (
-                  <Button className="w-full" variant={"outline"}>
-                    <Link key={v.url} href={v.url}>
-                      {v.icon}
-                    </Link>
+                  <Button key={v.url} className="w-full" variant={"outline"}>
+                    <Link href={v.url}>{v.icon}</Link>
                   </Button>
                 );
               }
               return (
-                <Button className="w-full" variant={"outline"}>
-                  <Link key={v.url} href={v.url}>
-                    {v.label}
-                  </Link>
+                <Button key={v.url} className="w-full" variant={"outline"}>
+                  <Link href={v.url}>{v.label}</Link>
                 </Button>
               );
             })}
