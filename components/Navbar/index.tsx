@@ -3,8 +3,9 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { MoreHorizontal } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileVersion from "./mobile";
+import { usePathname } from "next/navigation";
 
 export type navLink = { label: string; url: string; icon?: JSX.Element };
 const data: navLink[] = [
@@ -20,7 +21,11 @@ const data: navLink[] = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const onOpenChange = () => setOpen(!open);
+  const pathname = usePathname();
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   const renderNavLink = (item: navLink) => {
     return (
       <Link
