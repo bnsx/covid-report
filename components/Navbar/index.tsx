@@ -46,6 +46,7 @@ export default function Navbar() {
         {data.map((item) => renderNavLink(item))}
       </div>
       <Button
+        name="button-for-expand-and-collapsible"
         type="button"
         variant={"link"}
         className="xl:hidden"
