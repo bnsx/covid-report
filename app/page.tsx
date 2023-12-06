@@ -31,12 +31,9 @@ export default async function Home() {
           </div>
         </div>
         <div className="xl:w-3/4 space-y-5">
-          <div className="space-y-3 xl:space-y-0 xl:flex justify-between">
-            <h1 className="text-xl xl:text-2xl font-bold">
-              ข้อมูลรายสัปดาห์ (รายจังหวัด)
-            </h1>
-            <Input className="xl:w-1/3" placeholder="ค้นหาด้วยชื่อจังหวัด..." />
-          </div>
+          <h1 className="text-xl xl:text-2xl font-bold">
+            ข้อมูลรายสัปดาห์ (รายจังหวัด)
+          </h1>
           <DataTable data={dataPerWeek} columns={columns} />
         </div>
       </div>
